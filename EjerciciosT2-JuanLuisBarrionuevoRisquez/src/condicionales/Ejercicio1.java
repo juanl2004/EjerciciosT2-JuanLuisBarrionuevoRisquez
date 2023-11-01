@@ -15,7 +15,7 @@ public class Ejercicio1 {
 
 		if (numero >= 0 && numero <= 9) {
 			System.out.println("El número introducido es capicua");
-		} 
+		}
 
 		if (numero >= 10 && numero <= 99) {
 			if ((numero / 10) == (numero % 10)) {
@@ -28,23 +28,22 @@ public class Ejercicio1 {
 		if (numero >= 100 && numero <= 999) {
 			if ((numero / 100) == (numero % 10)) {
 				System.out.println("El número introducido es capicua");
-			} else{
+			} else {
 				System.out.println("El número introducido no es capicua");
 			}
 		}
 
 		if (numero >= 1000 && numero <= 9999) {
-			if ((numero / 1000) == (numero % 100)) {
+			if (numero / 1000 == numero % 10 && (numero / 100) % 10 == (numero / 10) % 10) {
 				System.out.println("El número introducido es capicua");
-			} else if ((numero / 100) == (numero % 10)) {
-				System.out.println("El número introducido es capicua");
-			} else if ((numero / (numero - 1)) == (numero % (numero - 1))) {
+			} else if ((numero / 100) == (numero % 100)) {
 				System.out.println("El número introducido es capicua");
 			} else {
 				System.out.println("El número introducido no es capicua");
 			}
-		}
-EjerciciosT2-JuanLuisBarrionuevoRisquez.git
-	}
+		} else {
+			System.out.println("El número introducido no está en el rango especificado");
 
+		}
+	}
 }
