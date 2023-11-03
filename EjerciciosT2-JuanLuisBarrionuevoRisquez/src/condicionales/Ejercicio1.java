@@ -72,7 +72,7 @@ public class Ejercicio1 {
 		}
 		//Comprobamos si el número esta comprendido entre 1000 y 9999.
 		if (numero >= 1000 && numero <= 9999) { 
-			//Comprobamos que el resultado del número entre 1000 es igual al resto de esta división entre 10 
+		 	//Comprobamos que el resultado del número entre 1000 es igual al resto de esta división entre 10 
 			//y que el resto de 10 entre el número entre 100 es igual al resto de 10 entre el número entre 10.
 			if (numero / 1000 == numero % 10 && (numero / 100) % 10 == (numero / 10) % 10) {
 				//Si es cierta la condición anterior se imprime es capicúa.
