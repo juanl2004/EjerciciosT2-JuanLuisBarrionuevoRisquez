@@ -10,15 +10,21 @@ import java.util.Scanner;
 public class Ejercicio2 {
 
 	public static void main(String[] args) {
-
+		//Declaramos la variable dni, que sera el intoducido por usuario.
 		int dni;
 
+		//Creamos el Scanner
 		Scanner sc = new Scanner(System.in);
 
+		//Le pedimos al usuario el dni sin la letra
 		System.out.println("Introduce tu DNI sin la letra -->");
+		//Leemos el dni del teclado
 		dni = sc.nextInt();
 		
+		//Condición para comprobar que el número introducido esta comprendido entre 00000000 y 99999999.
 		if (dni >= 00000000 && dni <= 99999999) {
+		
+		//Hacemos el mudulo del dni y comparamos todos los casos posibles, y el que se de se imprimira.
 		switch (dni % 23) {
 		case 0 -> System.out.println( dni + "T");
 		case 1 -> System.out.println( dni + "R");
@@ -44,9 +50,11 @@ public class Ejercicio2 {
 		case 21 -> System.out.println( dni + "K");
 		case 22 -> System.out.println( dni + "E");
 		}
-		} else {
+		} else { //Si no se da la condición del if
+			//Se imprimira "Valor no valido"
 			System.out.println("Valor no valido");
 		}
+		//Cierre Scanner
 		sc.close();
 	}
 

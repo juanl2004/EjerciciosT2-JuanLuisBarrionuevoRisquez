@@ -32,63 +32,60 @@ public class Ejercicio1 {
 		// Leemos el número del teclado.
 		numero = sc.nextInt();
 
-	// Comprobamos si el número esta comprendido entre 0 y 9999.
-	if (numero >= 0 && numero <= 9999) {
-	//Si no
-	} else {  
-		// Se imprimira el número no esta comprendido entre 0 y 9999.
-		System.out.println("El número introducido no está en el rango especificado");
+		// Comprobamos si el número esta comprendido entre 0 y 9999.
+		if (numero >= 0 && numero <= 9999) {
+			// Si no
+		} else {
+			// Se imprimira el número no esta comprendido entre 0 y 9999.
+			System.out.println("El número introducido no está en el rango especificado");
 		}
-		
-	//Comprobamos si el número esta comprendido entre 0 y 9.
-		if (numero >= 0 && numero <= 9) { 
-			//Se imprime capicúa si se cumple la función anterior.
-			System.out.println("El número introducido es capicúa"); 
+
+		// Comprobamos si el número esta comprendido entre 0 y 9.
+		if (numero >= 0 && numero <= 9) {
+			// Se imprime capicúa si se cumple la función anterior.
+			System.out.println("El número introducido es capicúa");
 		}
-		
-		//Comprobamos si el número esta comprendido entre 10 y 99.
-		if (numero >= 10 && numero <= 99) { 
-			//Comprobamos que el resultado del número entre 10 tiene que ser igual al resto de la misma división.
-			if ((numero / 10) == (numero % 10)) { 
-				//Si es cierta la condición anterior se imprime es capicúa.
-				System.out.println("El número introducido es capicúa"); 
-			//Si no
-			} else { 
-				//Se imprime no es capicúa.
-				System.out.println("El número introducido no es capicúa"); 
-			}
-		}
-		//Comprobamos si el número esta comprendido entre 100 y 999.
-		if (numero >= 100 && numero <= 999) {
-			//Comprobamos que el resultado del número entre 100 tiene que ser igual al resto del número entre 10.
-			if ((numero / 100) == (numero % 10)) { 
-				//Si es cierta la condición anterior se imprime es capicúa.
+
+		// Comprobamos si el número esta comprendido entre 10 y 99.
+		if (numero >= 10 && numero <= 99) {
+			// Comprobamos que el resultado del número entre 10 tiene que ser igual al resto
+			// de la misma división.
+			if ((numero / 10) == (numero % 10)) {
+				// Si es cierta la condición anterior se imprime es capicúa.
 				System.out.println("El número introducido es capicúa");
-			//Si no
+				// Si no
 			} else {
-				//Se imprime no es capicúa.
-				System.out.println("El número introducido no es capicúa"); 
+				// Se imprime no es capicúa.
+				System.out.println("El número introducido no es capicúa");
 			}
 		}
-		//Comprobamos si el número esta comprendido entre 1000 y 9999.
-		if (numero >= 1000 && numero <= 9999) { 
-		 	//Comprobamos que el resultado del número entre 1000 es igual al resto de esta división entre 10 
-			//y que el resto de 10 entre el número entre 100 es igual al resto de 10 entre el número entre 10.
-			if (numero / 1000 == numero % 10 && (numero / 100) % 10 == (numero / 10) % 10) {
-				//Si es cierta la condición anterior se imprime es capicúa.
-				System.out.println("El número introducido es capicúa"); 
-			//Comprobamos que el resultado del número entre 100 tiene que ser igual al resto de la misma división.	
-			} else if ((numero / 100) == (numero % 100)) {
-				//Si es cierta la condición anterior se imprime es capicúa.
-				System.out.println("El número introducido es capicúa"); 
-			//Si no
-			} else { 
-				//Se imprime no es capicúa.
-				System.out.println("El número introducido no es capicúa"); 
+		// Comprobamos si el número esta comprendido entre 100 y 999.
+		if (numero >= 100 && numero <= 999) {
+			// Comprobamos que el resultado del número entre 100 tiene que ser igual al
+			// resto del número entre 10.
+			if ((numero / 100) == (numero % 10)) {
+				// Si es cierta la condición anterior se imprime es capicúa.
+				System.out.println("El número introducido es capicúa");
+				// Si no
+			} else {
+				// Se imprime no es capicúa.
+				System.out.println("El número introducido no es capicúa");
+			}
+		}
+		// Comprobamos si el número esta comprendido entre 1000 y 9999.
+		if (numero >= 1000 && numero <= 9999) {
+			//Comprobamos si el primer y último dígito son iguales y si el segundo y el penúltimo dígito son iguales
+			if (numero % 10 == numero / 1000 && (numero / 10) % 10 == (numero / 100) % 10) {
+				// Si es cierta la condición anterior se imprime es capicúa.
+				System.out.println("El número ingresado es capicúa.");
+				// Si no
+			} else {
+				// Se imprime no es capicúa.
+				System.out.println("El número ingresado no es capicúa.");
 			}
 
 		}
-			//Cierre de Scanner
-			sc.close(); 
+		// Cierre de Scanner
+		sc.close();
 	}
 }
