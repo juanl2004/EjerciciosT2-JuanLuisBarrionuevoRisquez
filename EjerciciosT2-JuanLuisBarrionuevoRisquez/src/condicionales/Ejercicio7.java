@@ -26,14 +26,14 @@ public class Ejercicio7 {
 
 		// Si los minutos son mayores que 59, los minutos serian 0 y se incrementaria
 		// una hora a las horas
-		if (minutos > 59) {
+		if (minutos >= 59) {
 			minutos = 0;
 			horas++;
 		}
 
 		// Si los segundos son mayores que 59, los minutos serian 0 y se incrementaria
 		// un minuto a los minutos
-		if (segundos > 59) {
+		if (segundos >= 59) {
 			segundos = 0;
 			minutos++;
 		} else { //Si no, le incrementamos un segundo a los segundos 
