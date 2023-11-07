@@ -2,6 +2,12 @@ package condicionales;
 
 import java.util.Scanner;
 
+/*
+ * ENTRADA: 0 | RES. ESPERADO: 0 | RES. OBTENIDO: 0
+ * ENTRADA: -44 | RES. ESPERADO: 44 | RES. OBTENIDO: 44
+ * ENTRADA: 44 | RES. ESPERADO: 44 | RES. OBTENIDO: 44
+ */
+
 public class Ejercicio5 {
 
 	public static void main(String[] args) {

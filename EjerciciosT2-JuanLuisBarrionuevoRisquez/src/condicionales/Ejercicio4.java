@@ -2,11 +2,20 @@ package condicionales;
 
 import java.util.Scanner;
 
+/*
+ * ENTRADA: 0 | RES. ESPERADO: "El número debe estar entre 1 y 99." | RES. OBTENIDO: "El número debe estar entre 1 y 99."
+ * ENTRADA: 1 | RES. ESPERADO: "uno" | RES. OBTENIDO: "uno"
+ * ENTRADA: 12 | RES. ESPERADO: "doce" | RES. OBTENIDO: "doce"
+ * ENTRADA: 68 | RES. ESPERADO: "doce" | RES. OBTENIDO: "doce"
+ */
+
 public class Ejercicio4 {
 
 	public static void main(String[] args) {
 		//Variable para guardar el número introducido por el usuario.
 		int num;
+		int unidad;
+		int decenas;
 
 		//Creamos el Scanner
 		Scanner sc = new Scanner(System.in);
@@ -16,43 +25,33 @@ public class Ejercicio4 {
 		//Leemos el número del teclado
 		num = sc.nextInt();
 		
-		//Declaramos las siguientes variables como string para representar los números con palabras.
-		String[] unid = { "", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve" };
-		String[] espc = { "diez", "once", "doce", "trece", "catorce", "quince", "dieciseis", "diecisiete","dieciocho", "diecinueve" };
-		String[] dec = { "", "", "veinte", "treinta", "cuarenta", "cincuenta", "sesenta", "setenta", "ochenta","noventa" };
-
 		//Comprobamos si el número está entre 1 y 99
 		if (num >= 1 && num <= 99) {
-			
-			// Si el número es menor que 10, se imprime el número correspondiente a la unidad.
-			if (num < 10) {
-				System.out.println(unid[num]);
-			
-			// Si el número es mayor o igual que diez y menor 20, imprime el nombre correspondiente a la espc.
-			} else if (num < 20 && num >= 10) {
-				System.out.println(espc[num - 10]);
-			
-			// Si el número es mayor o igual a 20.
-			} else {
-				// Calcula las unidades haciendo el modulo del número entre 10.
-				int unidad = num % 10;
-				// Calcula las decenas haciendo la división del número entre 10
-				int decena = num / 10;
-				
-				// Si las unidades son 0, solo se imprime el resultado de las decenas
-				if (unidad == 0) {
-					System.out.println(dec[decena]);
-				// Si no, se imprime las decenas y seguidamente las unidades. 
-				} else {
-					System.out.println(dec[unidad] + " y " + unid[unidad]);
-				}
-			}
-		// Si el número está fuera del rango de 1 a 99, imprime un mensaje de error.
-		} else {
-			System.out.println("El número debe estar entre 1 y 99.");
+		
+		unidad = num % 10;
+		switch (unidad)	{
+		case 1 -> System.out.println("uno");
+		case 2 -> System.out.println("dos");
+		case 3 -> System.out.println("tres");
+		case 4 -> System.out.println("cuatro");
+		case 5 -> System.out.println("cinco");
+		case 6 -> System.out.println("seis");
+		case 7 -> System.out.println("siete");
+		case 8 -> System.out.println("ocho");
+		case 9 -> System.out.println("nueve");
 		}
-		//Cierre de Scanner
+		
+		decenas = num / 10;
+		switch (decenas)	{
+		case 1 -> System.out.println("diez");
+		case 2 -> System.out.println("doce");
+		case 3 -> System.out.println("trece");
+		case 4 -> System.out.println("catorce");
+		case 5 -> System.out.println("quince");
+		}
 		sc.close();
 	}
 
+	}
+	
 }

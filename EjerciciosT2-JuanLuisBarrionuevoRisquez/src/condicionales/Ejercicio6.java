@@ -4,6 +4,13 @@ import java.util.Random;
 
 import java.util.Scanner;
 
+/*
+ * ENTRADA.USUARIO: 152 | RES. ESPERADO: "¡CORRECTA!" | RES. OBTENIDO: "¡CORRECTA!" 
+ * ENTRADA.USUARIO: 100 | RES. ESPERADO: "¡INCORRECTA!" | RES. OBTENIDO: "¡INCORRECTA!"
+ * ENTRADA.USUARIO: 0 | RES. ESPERADO: "¡INCORRECTA!" | RES. OBTENIDO: "¡INCORRECTA!"
+ * ENTRADA.USUARIO: -24 | RES. ESPERADO: "¡INCORRECTA!" | RES. OBTENIDO: "¡INCORRECTA!"
+ */
+
 public class Ejercicio6 {
 
 	public static void main(String[] args) {
@@ -30,20 +37,22 @@ public class Ejercicio6 {
 		System.out.println("¡VAMOS A JUGAR!");
 		System.out.println("Adivina la suma de estos dos números --> " + numero1 + " y " + numero2);
 		System.out.println("¿Cual crees que es la suma? --> ");
-		//Leemos el número del teclado
+		// Leemos el número del teclado
 		suma = sc.nextInt();
-		
-		//Instrucciones para calcular la suma de los números aleatorios por parte de la máquina
+
+		// Instrucciones para calcular la suma de los números aleatorios por parte de la
+		// máquina
 		sumamaq = numero1 + numero2;
 
-		//Si el resultado de la suma hecha por nosotros y el de la máquina coincide se mostrara "CORRECTA"
+		// Si el resultado de la suma hecha por nosotros y el de la máquina coincide se
+		// mostrara "CORRECTA"
 		if (suma == sumamaq) {
 			System.out.println("Suma --> ¡CORRECTA!");
 
-		} else { //Si no, se imprime "INCORRECTA"
+		} else { // Si no, se imprime "INCORRECTA"
 			System.out.println("Suma --> ¡INCORRECTA!");
 		}
-		//Cierre Scanner
+		// Cierre Scanner
 		sc.close();
 	}
 
