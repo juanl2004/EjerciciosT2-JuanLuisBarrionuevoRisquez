@@ -74,7 +74,8 @@ public class Ejercicio1 {
 		}
 		// Comprobamos si el número esta comprendido entre 1000 y 9999.
 		if (numero >= 1000 && numero <= 9999) {
-			//Comprobamos si el primer y último dígito son iguales y si el segundo y el penúltimo dígito son iguales
+			// Comprobamos si el primer y último dígito son iguales y si el segundo y el
+			// penúltimo dígito son iguales
 			if (numero % 10 == numero / 1000 && (numero / 10) % 10 == (numero / 100) % 10) {
 				// Si es cierta la condición anterior se imprime es capicúa.
 				System.out.println("El número ingresado es capicúa.");
