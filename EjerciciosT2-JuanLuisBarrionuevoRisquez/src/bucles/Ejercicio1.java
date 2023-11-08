@@ -1,25 +1,18 @@
 package bucles;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicio1 {
 
 	public static void main(String[] args) {
 
-		int horas;
-		int minutos;
-		int segundos;
-		int cantsegund;
-		int totalSegundos;
-		int nuevasH;
-		int nuevosM;
-		int nuevosS;
+		int horas = 0, minutos, segundos;
+		int incremento;
 
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Introduce las horas --> ");
-		horas = sc.nextInt();
-
+		
 		System.out.println("Introduce los minutos --> ");
 		minutos = sc.nextInt();
 
@@ -27,22 +20,26 @@ public class Ejercicio1 {
 		segundos = sc.nextInt();
 
 		System.out.println("Introduce la cantidad de segundos a incrementar --> ");
-		cantsegund = sc.nextInt();
-
-		totalSegundos = horas * 3600 + minutos * 60 + segundos;
-
-		totalSegundos =+ cantsegund;
-
-		while (totalSegundos >= 86400) {
-			totalSegundos -= 86400;
+		incremento = sc.nextInt();
+		
+	do {
+		try {
+			System.out.println("Introduce las horas --> ");
+			horas = sc.nextInt();
+		} catch(InputMismatchException e) {
+			System.out.println("El dado introducido no es del tipo correcto");
+			sc.nextLine();
 		}
+	} while (horas < 0 || horas > 23);
 
-		nuevasH = totalSegundos / 3600;
-		nuevosM= (totalSegundos % 3600) / 60;
-		nuevosS = totalSegundos % 60;
-
-		System.out.printf("La nueva hora es: " + nuevasH + ":" + nuevosM + ":" + nuevosS);
-
+	segundos = segundos + incremento;
+	while (segundos > 59) {
+	minutos++;
+	}
+	
+	while (minutos > 59) {
+	horas++;
+	}
 		sc.close();
 	}
 
