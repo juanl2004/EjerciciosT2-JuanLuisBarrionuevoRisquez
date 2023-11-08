@@ -33,6 +33,9 @@ public class Ejercicio4 {
 			decenas = num / 10;
 
 			switch (unidad) {
+			case 0:
+				numUnid = "nueve";
+				break;
 			case 1:
 				numUnid = "uno";
 				break;
@@ -60,6 +63,7 @@ public class Ejercicio4 {
 			case 9:
 				numUnid = "nueve";
 				break;
+			
 			}
 
 			switch (decenas) {
