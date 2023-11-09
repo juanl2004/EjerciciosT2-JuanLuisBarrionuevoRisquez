@@ -72,9 +72,9 @@ public class Ejercicio1 {
 			if (horas == 24) {
 				horas = 0;
 			}
-			
-			if () {}
-		}
+			}
+		
+		System.out.println(horas + ":" +  minutos + ":" + segundos);
 		
 		sc.close();
 		
